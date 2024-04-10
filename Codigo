@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Python en GitHub</title>
+</head>
+<body>
+    <pre><code>
+        def sumar_lista(lista1, lista2):
+            """
+            list,list->lista
+            """
+            len1 = len(lista1)
+            lista3 = []
+            if len1 == len(lista2):
+
+                for i in range(len1):
+                    lista3.append(lista1[i]+lista2[i])
+            else:
+                pos = 0
+                if len(lista1) > len(lista2):
+
+                    for i in range(len(lista2)):
+                        lista3.append(lista1[i] + lista2[i])
+                        pos += 1
+                    lista3 = lista3 + lista1[pos:]
+                else:
+                    for i in range(len(lista1)):
+                        lista3.append(lista1[i] + lista2[i])
+                        pos += 1
+                    lista3 = lista3 + lista2[pos:]
+
+            return lista3
+
+
+        lista1 = [1, 2, 3, 4, 5]
+        lista2 = [2, 3, 4, 5]
+
+        print(sumar_lista(lista1, lista2))
+    </code></pre>
+</body>
+</html>
